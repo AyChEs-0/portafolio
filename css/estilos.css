@@ -1,0 +1,304 @@
+/* ---------------------------- */
+/* Estilos Generales */
+/* ---------------------------- */
+
+/* RESET de márgenes y padding */
+* {
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño */
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Inter', sans-serif; /* Fuente del texto */
+    color: #000000; /* Color del texto */
+    background-color: #FFFFFF; /* Color de fondo */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Navbar (común para todas las páginas) */
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo de la navbar */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.navbar.scrolled {
+    background-color: #000000; /* Color de fondo al hacer scroll */
+    color: #FFFFFF; /* Color del texto al hacer scroll */
+}
+
+.navbar .navbar-brand {
+    font-weight: bold; /* Negrita para el logo */
+    font-size: 1.5rem; /* Tamaño de fuente del logo */
+}
+
+.navbar .nav-item {
+    margin-left: 15px; /* Espaciado entre elementos de la navbar */
+}
+
+.navbar .nav-link {
+    color: #000000; /* Color de los enlaces */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.navbar .nav-link:hover {
+    color: #818181; /* Color al pasar el ratón */
+}
+
+.navbar button {
+    background-color: #000000; /* Color de fondo del botón */
+    color: #FFFFFF; /* Color del texto del botón */
+    padding: 5px 10px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+.navbar button:hover {
+    background-color: #818181; /* Color al pasar el ratón */
+    transform: scale(1.05); /* Aumenta tamaño al pasar */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Centrar texto */
+    background-color: #000000; /* Color de fondo del footer */
+    color: #FFFFFF; /* Color del texto */
+    padding: 20px 10px; /* Espaciado interno */
+}
+
+/* ---------------------------- */
+/* Estilos Específicos */
+/* ---------------------------- */
+
+/* Estilos específicos para index.html */
+#index .intro-section {
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Dirección de los elementos en fila */
+    align-items: center; /* Alinear verticalmente */
+    padding: 50px 10%; /* Espaciado interno */
+    gap: 30px; /* Espacio entre columnas */
+    justify-content: space-between; /* Distribuir el espacio */
+    margin-bottom: 20px;
+}
+
+#index .intro-section h1 {
+    font-size: 2.5rem; /* Tamaño de fuente del título */
+    font-weight: 700; /* Negrita para el título */
+    color: #212529; /* Color del título */
+    overflow: hidden; /* Oculta el desbordamiento */
+    white-space: nowrap; /* Sin salto de línea */
+    border-right: 2px solid; /* Línea a la derecha */
+    width: 0; /* Ancho inicial */
+    max-width: 100%;
+    animation: typing 7s steps(30, end) infinite, blink 0.5s step-end infinite; 
+    margin-bottom: 20px;
+}
+
+@keyframes typing {
+    from { width: 0; } /* Comienza sin ancho */
+    to { width: 100%; } /* Expande el ancho */
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; } /* Sin color al inicio y fin */
+    50% { border-color: black; } /* Color en el medio */
+}
+
+#index .intro-section p {
+    font-weight: 700; /* Negrita para el párrafo */
+    font-size: 1.25rem; /* Tamaño de fuente del párrafo */
+    max-width: 1200px; /* Ancho máximo ```css
+    color: #555555; /* Color del párrafo */
+}
+
+/* Estado de ubicación */
+.location-status {
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Alinear verticalmente */
+    gap: 15px; /* Espacio entre elementos */
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #333333; /* Color del texto */
+}
+
+.location-status img {
+    width: 20px; /* Ancho de la imagen */
+    height: 20px; /* Alto de la imagen */
+}
+
+/* Información adicional */
+.additional-info {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Columna vertical */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+/* Indicador de estado */
+.status-indicator {
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Alinear verticalmente */
+    gap: 5px; /* Espacio entre el icono y el texto */
+    font-weight: 600; /* Negrita para el indicador */
+    color: #28a745; /* Color del texto */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+}
+
+.status-indicator span {
+    width: 10px; /* Ancho del indicador */
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-right: 0px; /* Espacio a la derecha */
+}
+
+/* Iconos sociales */
+.social-icons {
+    display: flex; /* Usar flexbox */
+    gap: 15px; /* Espacio entre iconos */
+    margin-top: 15px;
+}
+
+.social-icons a img {
+    width: 25px; /* Ancho de los iconos */
+    height: 25px; /* Alto de los iconos */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); /* Aumenta tamaño al pasar */
+}
+
+
+
+/* ---------------------------- */
+/* Estilos para el apartado Sobre Mí */
+/* ---------------------------- */
+
+/* Contenedor Principal */
+
+
+.sobremi-container {
+    display: flex; /* Alineación horizontal */
+    justify-content: space-around; /* Espacio entre las cards */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Permitir ajuste en pantallas pequeñas */
+    padding: 40px 10%; /* Espaciado interno */
+    gap: 30px; /* Espaciado entre cards */
+  }
+  
+  /* Estilo General para las Cards */
+  .card {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 20px; /* Espaciado interno */
+    max-width: 400px; /* Ancho máximo */
+    text-align: center; /* Centrar contenido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  }
+  
+  /* Efecto Hover para las Cards */
+  .card:hover {
+    transform: translateY(-10px); /* Eleva la card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+  }
+  
+  /* Card de Imagen */
+  .card-imagen {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centra la imagen */
+    align-items: center; /* Centra verticalmente */
+    overflow: hidden; /* Oculta el desbordamiento */
+  }
+  
+  
+  /* Imagen */
+  .imagen-container img {
+    width: 100%; /* Ajusta la imagen al contenedor */
+    height: 100%;
+    object-fit: cover; /* Recorta y ajusta la imagen */
+    transition: transform 0.3s ease; /* Transición suave */
+  }
+  
+  .imagen-container img:hover {
+    transform: scale(1.1); /* Efecto de zoom */
+  }
+  
+  /* Card de Descripción */
+  .card-descripcion {
+    text-align: left; /* Alineación del texto */
+    color: #333333; /* Color del texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+  }
+  
+  .card-descripcion h2 {
+    font-size: 1.8rem; /* Tamaño del título */
+    margin-bottom: 15px; /* Espaciado inferior */
+    color: #000000; /* Color del título */
+  }
+  
+  .card-descripcion p {
+    font-size: 1rem; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+/* ---------------------------- */
+/* Diseño Responsivo */
+/* ---------------------------- */
+
+/* En pantallas grandes */
+@media (max-width: 1024px) {
+    .navbar .nav-item {
+        margin-left: 10px; /* Reducir espaciado en tabletas */
+    }
+
+    .intro-section {
+        padding: 40px 10%; /* Ajustar el padding */
+    }
+
+    .intro-section h1 {
+        font-size: 2.5rem; /* Reducir tamaño de fuente */
+    }
+}
+
+/* En tabletas */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Cambiar a columna */
+        text-align: center; /* Centrar texto */
+        padding: 30px 5%; /* Ajustar padding */
+    }
+
+    .intro-section h1 {
+        font-size: 2rem; /* Reducir tamaño */
+    }
+
+    .navbar .nav-item {
+        margin: 5px 0; /* Espaciado vertical */
+    }
+}
+
+/* En móviles */
+@media (max-width: 480px) {
+    .intro-section h1 {
+        font-size: 1.5rem; /* Tamaño reducido */
+    }
+
+    .intro-section p {
+        font-size: 0.9rem; /* Reducir tamaño de texto */
+    }
+
+    .navbar .navbar-brand {
+        font-size: 1.2rem; /* Logo más pequeño */
+    }
+
+    .social-icons a img {
+        width: 20px; /* Reducir tamaño de iconos */
+        height: 20px; /* Reducir tamaño */
+    }
+
+    .emoji {
+        font-size: 1.5rem; /* Tamaño del emoji */
+        margin: 0 5px; /* Espaciado */
+    }
+}
